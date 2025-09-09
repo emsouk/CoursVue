@@ -14,7 +14,7 @@
       <ul class="menu menu-horizontal px-1 text-lg">
         <li><router-link to="/">Accueil</router-link></li>
         <li><router-link to="/about">À propos</router-link></li>
-        <li><router-link to="/services">Services</router-link></li>
+        <li><router-link to="/exercice1">exercice 1</router-link></li>
         <li><router-link to="/contact">Contact</router-link></li>
       </ul>
     </div>

@@ -20,10 +20,11 @@ import HelloWorld from './components/HelloWorld.vue'
 
 
 <script setup lang="js">
-import HelloWorld from './components/HelloWorld.vue'
+
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
-import { ref } from 'vue';
+
+
 </script>
  
 <style>

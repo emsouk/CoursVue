@@ -1,3 +1,9 @@
 <template>
-    <h1 class="mt-10">ICI c'est HOME !</h1>
+<exercice1></exercice1>
 </template>
+
+<script setup lang="ts">
+
+import exercice1 from './exercices/exercice1.vue';
+</script>
+
