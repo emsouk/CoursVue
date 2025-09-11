@@ -7,11 +7,11 @@
 
         <h2 :class="{ 'maClassHello': text === 'Hello','maClassworld': text === 'World' }">Hello World class dynamique</h2>
 
-        <input style=" margin: 2vh; border-radius: 5px; background-color: white" :style="{backgroundColor: text1 }"  type="text" v-model="text1"  name="" id=""> <br>
+        <input style=" margin: 2vh; border-radius: 5px; border: 2px solid white" :style="{backgroundColor: text1 }"  type="text" v-model="text1"  name="" id=""> <br>
 
         <h2 :class="{ 'hidden': hiddenTitle }">  Hello World</h2>
 
-        <input style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); margin-top: 10px; background-color: yellow; border: 2px solid yellow; border-radius: 5px;" type="button" @click="hiddenTitle = !hiddenTitle" value="Afficher 1er titre">
+        <input style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); margin-top: 10px; background-color: yellow; border: 2px solid yellow; border-radius: 5px;" type="button" @click="hiddenTitle = !hiddenTitle" value="Masquer le titre du dessus, ehehe 😉">
     </div>
 </template>
 
