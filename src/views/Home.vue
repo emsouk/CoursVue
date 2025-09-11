@@ -5,5 +5,6 @@
 <script setup lang="ts">
 
 import exercice1 from './exercices/exercice1.vue';
+import exercicevOn from './exercices/exercicev-on.vue';
 </script>
 

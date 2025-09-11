@@ -13,7 +13,6 @@
 
 <script setup lang="ts">
 
-
 let object = {
   photo: "https://goodflair.com/app/uploads/2024/07/beautiful-bengal-cat.jpg",
   name: "Mario",

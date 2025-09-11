@@ -19,6 +19,11 @@ const router = createRouter({
             path: '/exercice1',
             name: 'exercice1',
             component: () => import('../views/exercices/exercice1.vue')
+        },
+        {
+            path: '/exercicev-on',
+            name: 'exercicev-on',
+            component: () => import('../views/exercices/exercicev-on.vue')
         }
     ]
 
