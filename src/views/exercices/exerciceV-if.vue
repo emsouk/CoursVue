@@ -6,7 +6,7 @@
             <input  type="text" v-model="film" placeholder="Entrez le nom d'un film"
                 class="input input-bordered w-full mb-3" />
 
-            <button @click="ajouterFilm" class="btn btn-primary mb-4">
+            <button @click="ajouterFilm"  class="btn btn-primary mb-4">
                 Ajouter à votre Liste
             </button>
 
@@ -18,8 +18,8 @@
              
             <div v-if="tableauFilms.length > 0">
                 <ul>
-                    <li style= "border: 1px solid black; margin: 8px; text-align: center;" v-for="(item, index) in tableauFilms" :key="index">
-                    {{ index + 1 }}. {{ item }} 
+                    <li @click="supprimerFilm(index)" style= "border: 1px solid black; margin: 8px; text-align: center;" v-for="(item, index) in tableauFilms" :key="index">
+                    {{ index + 1 }}. {{ item }}  
                     </li>
                 </ul>
             </div>    
@@ -36,6 +36,9 @@ import { ref } from 'vue';
 
 const film = ref('');
 const tableauFilms = ref([]);
+const supprimerFilm = (index) => {
+    tableauFilms.value.splice(index, 1);
+};
 
 
 const ajouterFilm = () => {
