@@ -24,7 +24,13 @@ const router = createRouter({
             path: '/exercicev-on',
             name: 'exercicev-on',
             component: () => import('../views/exercices/exercicev-on.vue')
+        },
+        {
+            path: '/tpStyleDynamique',
+            name: 'tpStyleDynamique',
+            component: () => import('../views/tp/tpStyleDynamique.vue')
         }
+       
     ]
 
 });

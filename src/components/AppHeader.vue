@@ -1,5 +1,5 @@
  <!-- NAVBAR GLASSMORPHISME -->
-<template>
+<template class="pb-16">
   <div
     class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/80 text-black px-6"
   >
