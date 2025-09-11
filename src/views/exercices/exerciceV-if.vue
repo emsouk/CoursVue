@@ -18,8 +18,8 @@
              
             <div v-if="tableauFilms.length > 0">
                 <ul>
-                    <li v-for="(item, index) in tableauFilms" :key="index">
-                    {{ item }}
+                    <li style= "border: 1px solid black; margin: 8px; text-align: center;" v-for="(item, index) in tableauFilms" :key="index">
+                    {{ index + 1 }}. {{ item }} 
                     </li>
                 </ul>
             </div>    
@@ -30,7 +30,7 @@
     </div>
 </template>
 
-<script setup >;
+<script setup>
 
 import { ref } from 'vue';
 
