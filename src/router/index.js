@@ -34,6 +34,13 @@ const router = createRouter({
             path: '/exercicev-if',
             name: 'exercicev-if',
             component: () => import('../views/exercices/exerciceV-if.vue')
+        },
+        {
+            path: '/components_lifecycle',
+            name: 'components_lifecycle',
+            component: () => import('../views/exercices/components_lifecycle.vue')
+        },
+        {
         }
 
     ]
