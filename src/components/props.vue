@@ -4,7 +4,7 @@
             <h2 class="card-title text-primary">
                 👤 {{ unAmiName }}
                 <div class="badge" :class="premium ? 'badge-success' : 'badge-ghost'">
-                    {{ premium ? 'Premium' : 'Standard' }}
+                    {{ premium ? 'Tu es un ami premium' : 'Tu es un ami standard' }}
                 </div>
             </h2>
 
@@ -24,7 +24,8 @@
                     {{ unAmiMail }}
                 </p>
             </div>
-            <button @click="deleteFriend">Supprimer</button>
+            <button class="btn btn-danger"@click="deleteFriend">Supprimer</button>
+            <button class="btn" @click="makePremium">Premium ⭐️</button>
             <!-- <div class="card-actions justify-end mt-4">
                 <button class="btn btn-sm btn-primary">Contacter</button>
             </div> -->
@@ -35,7 +36,8 @@
 <script setup >
 import { defineProps, defineEmits } from 'vue';
 
-const emit = defineEmits(["suppr"])
+
+const emit = defineEmits(["suppr", "makePremium"]);
 
 const props = defineProps({
     id: {
@@ -63,5 +65,9 @@ const props = defineProps({
 
 function deleteFriend(){
     emit("suppr",props.id)
+}
+
+function makePremium(){
+    emit("makePremium",props.id);
 }
 </script>

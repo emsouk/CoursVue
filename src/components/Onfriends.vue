@@ -1,5 +1,5 @@
 <template>
-    <h1>Ici La page des Copains ! </h1>
+    <h1 className="pt-12 fw-bold" style="text-align: center">Ici ! La page des copains 👯 </h1>
     <!-- <OneFriend 
     id="toto"
     unAmiName="totoName"
@@ -16,7 +16,8 @@
     :unAmiPhone="ami.phone"
     :unAmiMail="ami.email"
     :premium="ami.premium"
-    @suppr = deleteFriend($event)
+    @suppr="deleteFriend($event)"
+    @makePremium="makePremium($event)"
     ></props>
 
 
@@ -69,5 +70,11 @@ const lesAmis = ref([
 function deleteFriend(id){
     console.log(id);
     lesAmis.value.splice(id, 1);
+}
+
+function makePremium(id){
+    console.log(id);
+    const togglepremium = lesAmis.value.find((element) => element.id === id);
+    togglepremium.premium = !togglepremium.premium;
 }
 </script>
