@@ -24,7 +24,7 @@
                     {{ unAmiMail }}
                 </p>
             </div>
-
+            <button @click="deleteFriend">Supprimer</button>
             <!-- <div class="card-actions justify-end mt-4">
                 <button class="btn btn-sm btn-primary">Contacter</button>
             </div> -->
@@ -32,7 +32,11 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup >
+import { defineProps, defineEmits } from 'vue';
+
+const emit = defineEmits(["suppr"])
+
 const props = defineProps({
     id: {
         type: String,
@@ -56,4 +60,8 @@ const props = defineProps({
         default: false,
     },
 })
+
+function deleteFriend(){
+    emit("suppr",props.id)
+}
 </script>

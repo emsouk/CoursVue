@@ -16,10 +16,14 @@
     :unAmiPhone="ami.phone"
     :unAmiMail="ami.email"
     :premium="ami.premium"
+    @suppr = deleteFriend($event)
     ></props>
+
+
+
 </template>
 
-<script setup lang='ts'>
+<script setup>
 import Props from './props.vue';
 import {ref} from 'vue';
 
@@ -33,8 +37,8 @@ const lesAmis = ref([
         premium: true
     },
     {
-        id: 'lasticot2',
-        name: 'COCO L ASTICOT',
+        id: 'lamouette',
+        name: 'COCO LA MOUETTE',
         phone: '01234 5678 991',
         email: 'coco@lasticot.com',
         premium: true
@@ -54,11 +58,16 @@ const lesAmis = ref([
         premium: true
     },
     {
-        id: 'yoyoyo',
-        name: "JAROD",
+        id: 'loulou',
+        name: "LOULOU",
         phone: '+338765477',
         email: 'jAROD@seagal.com',
         premium: true
     }
 ]);
+
+function deleteFriend(id){
+    console.log(id);
+    lesAmis.value.splice(id, 1);
+}
 </script>
