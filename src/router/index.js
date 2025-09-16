@@ -40,9 +40,27 @@ const router = createRouter({
             name: 'components_lifecycle',
             component: () => import('../views/exercices/components_lifecycle.vue')
         },
+      
         {
+            path: '/HelloWorld',
+            name: 'HelloWorld',
+            component: () => import('../components/HelloWorld.vue')
+        },
+        {
+            path: '/props',
+            name: 'props',
+            component: () => import('../components/props.vue')
+        },
+        {
+            path: '/LikeButton',
+            name: 'LikeButton',
+            component: () => import('../components/LikeButton.vue')
+        },
+        {
+            path: '/OnFriends',
+            name: 'OnFriends',
+            component: () => import('../components/Onfriends.vue')
         }
-
     ]
 
 });
