@@ -1,12 +1,12 @@
 <template>
 
 
-<tpCompoEvent></tpCompoEvent>
+<ChartJs></ChartJs>
 
 </template>
 
 <script setup lang="js">
-
+import  ChartJs  from './lecons/ChartJs.vue';
 import HelloWorld from '../components/HelloWorld.vue';
 // import exercice1 from './exercices/exercice1.vue';
 import exercicevOn from './exercices/exercicev-on.vue';
