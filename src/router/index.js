@@ -60,7 +60,26 @@ const router = createRouter({
             path: '/OnFriends',
             name: 'OnFriends',
             component: () => import('../components/Onfriends.vue')
+        },
+        {
+            path: '/tp-compo-event',
+            name: 'tp-compo-event',
+            component: () => import('../components/tp-compo-event.vue')
+
+        },
+        {
+            path: '/UserData',
+            name: 'UserData',
+            component: () => import('../components/UserData.vue')
+
+        },
+        {
+            path: '/UserActive',
+            name: 'UserActive',
+            component: () => import('../components/UserActive.vue')
+
         }
+
     ]
 
 });

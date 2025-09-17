@@ -1,5 +1,14 @@
-<template>
+ <!-- Parents  -->
+
+<template> 
     <h1 className="pt-12 fw-bold" style="text-align: center">Ici ! La page des copains 👯 </h1>
+
+    <NewFriend @add-friend="addNewFriend"></NewFriend>
+    <Devoir
+    :superFormateur="superFormateur"
+    @babar="mangeTaCarottecarotte($e)"
+   
+ /> 
     <!-- <OneFriend 
     id="toto"
     unAmiName="totoName"
@@ -21,13 +30,19 @@
     ></props>
 
 
-
 </template>
 
 <script setup>
+import NewFriend from './NewFriend.vue';
+import Devoir from './Devoir.vue';
 import Props from './props.vue';
 import {ref} from 'vue';
 
+
+const superFormateur = ref("Jeff")
+console.log(superFormateur);
+const carotte = ref("");
+console.log("ceci est une carotte", carotte.value);
 
 const lesAmis = ref([
     {
@@ -67,6 +82,8 @@ const lesAmis = ref([
     }
 ]);
 
+
+
 function deleteFriend(id){
     console.log(id);
     lesAmis.value.splice(id, 1);
@@ -77,4 +94,24 @@ function makePremium(id){
     const togglepremium = lesAmis.value.find((element) => element.id === id);
     togglepremium.premium = !togglepremium.premium;
 }
+
+function mangeTaCarotte(any){
+console.log("brouette")
+}
+
+// const addNewFriend = (name, tel, mail) => {
+//     console.log('On arrive dans la fonction addNewFriend');
+//     console.log('name', name);
+//     console.log('tel', tel);
+//     console.log('mail', mail);
+// 	const newFriend = {
+//         id: Math.random().toString(),
+//         name,
+//         tel,
+//         mail,
+//         premium: false
+//     };
+
+// 	lesAmis.value.push(newFriend);
+// }
 </script>

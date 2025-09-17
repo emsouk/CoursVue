@@ -1,5 +1,10 @@
+ <!-- ENfant  -->
+
 <template>
+
+    
     <div class="card w-full max-w-md bg-base-200 shadow-xl my-4">
+
         <div class="card-body">
             <h2 class="card-title text-primary">
                 👤 {{ unAmiName }}
